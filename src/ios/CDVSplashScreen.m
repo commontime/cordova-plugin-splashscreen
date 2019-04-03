@@ -187,12 +187,13 @@
 }
 
 - (BOOL) isUsingCDVLaunchScreen {
-    NSString* launchStoryboardName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UILaunchStoryboardName"];
+    return NO;
+    /*NSString* launchStoryboardName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UILaunchStoryboardName"];
     if (launchStoryboardName) {
         return ([launchStoryboardName isEqualToString:@"CDVLaunchScreen"]);
     } else {
         return NO;
-    }
+    }*/
 }
 
 - (NSString*)getImageName:(UIInterfaceOrientation)currentOrientation delegate:(id<CDVScreenOrientationDelegate>)orientationDelegate device:(CDV_iOSDevice)device
